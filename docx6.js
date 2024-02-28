@@ -15,9 +15,13 @@ if(localStorage.getItem('import-map-overrides-external-maps') === null) {
 } else {
   const orgFetch = window.fetch;
   window.fetch = function fakeFetch() {
-    console.log(arguments);
+    const args = Array.from(arguments);
+    if(args[0].includes('1/user/userdetails') && args[1].headers) {
+      alert(JSON.stringify(args[1].headers, null, 2));
+      console.log(args[1].headers)
+    }
     
-    return orgFetch.apply(null, Array.from(arguments))
+    return orgFetch.apply(null, args)
   }
 }
 
