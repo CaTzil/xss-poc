@@ -1,5 +1,5 @@
 const searchParams = new URLSearchParams(location.search);
-debugger;
+
 if(localStorage.getItem('import-map-overrides-external-maps') === null) {
   localStorage.setItem(
     'import-map-overrides-external-maps',
@@ -17,7 +17,7 @@ if(localStorage.getItem('import-map-overrides-external-maps') === null) {
   window.fetch = function fakeFetch() {
     const args = Array.from(arguments);
     if(args[0].includes('1/user/userdetails') && args[1].headers) {
-      alert(JSON.stringify(args[1].headers, null, 2));
+      confirm(JSON.stringify(args[1].headers, null, 2));
       console.log(args[1].headers)
     }
     
