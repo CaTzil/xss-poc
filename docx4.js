@@ -1,5 +1,5 @@
 const searchParams = new URLSearchParams(location.search);
-d
+debugger;
 if(searchParams.has('code') && location.pathname ==='/authenticate') {
   alert(location.href);
   console.log(location.href);
