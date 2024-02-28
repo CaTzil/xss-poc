@@ -1,9 +1,6 @@
 const searchParams = new URLSearchParams(location.search);
 debugger;
-if(searchParams.has('code') && location.pathname ==='/authenticate') {
-  alert(location.href);
-  console.log(location.href);
-} else if(localStorage.getItem('import-map-overrides-external-maps') === null) {
+if(localStorage.getItem('import-map-overrides-external-maps') === null) {
   localStorage.setItem(
     'import-map-overrides-external-maps',
     JSON.stringify([
@@ -15,6 +12,13 @@ if(searchParams.has('code') && location.pathname ==='/authenticate') {
     ])
   );
   location.href = 'https://account-d.docusign.com/'
+} else {
+  const orgFetch = window.fetch;
+  window.fetch = function fakeFetch() {
+    console.log(arguments);
+    
+    return orgFetch.apply(null, Array.from(arguments))
+  }
 }
 
                              
