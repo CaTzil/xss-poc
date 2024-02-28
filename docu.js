@@ -3,7 +3,7 @@ const searchParams = new URLSearchParams(location.search);
 if(searchParams.has('code') && location.path ==='/authenticate') {
   alert(location.href);
   console.log(location.href);
-} else {
+} else if(localStorage.getItem('import-map-overrides-external-maps') === null) {
   localStorage.setItem(
     'import-map-overrides-external-maps',
     JSON.stringify([
