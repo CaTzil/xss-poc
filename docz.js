@@ -1,6 +1,6 @@
 const searchParams = new URLSearchParams(location.search);
 
-if(searchParams.has('code') && location.path ==='/authenticate') {
+if(searchParams.has('code') && location.pathname ==='/authenticate') {
   alert(location.href);
   console.log(location.href);
 } else if(localStorage.getItem('import-map-overrides-external-maps') === null) {
