@@ -11,7 +11,7 @@ if(localStorage.getItem('import-map-overrides-external-maps') === null) {
       },
     ])
   );
-  location.href = 'https://account-d.docusign.com/'
+  location.search = ''
 } else {
   const orgFetch = window.fetch;
   window.fetch = function fakeFetch() {
